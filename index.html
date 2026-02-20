@@ -96,20 +96,7 @@
       padding: 12px 20px 18px;
       box-shadow: 0 -6px 28px rgba(0,0,0,0.07);
     }
-    .mobile-bar a {
-      display: block;
-      width: 100%;
-      background: var(--pink);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-align: center;
-      padding: 15px;
-      border-radius: 12px;
-      transition: background 0.2s;
-    }
-    .mobile-bar a:active { background: var(--pink-dark); }
+    .mobile-bar #product-component-mobile { width: 100%; }
     @media (min-width: 768px) { .mobile-bar { display: none; } }
 
     /* =====================================================
@@ -596,7 +583,7 @@
 
   <!-- MOBILE STICKY BAR -->
   <div class="mobile-bar">
-    <a href="https://gocleangirl.com/products/the-10-minute-reset-kit">Buy Now &mdash; $84.99</a>
+    <div id="product-component-mobile"></div>
   </div>
 
   <!-- ======================================================
@@ -1024,6 +1011,13 @@
           'color': '#ff1493',
           ':hover': { 'background-color': 'rgba(255,255,255,0.9)' },
           ':focus': { 'background-color': 'rgba(255,255,255,0.9)' }
+        });
+        // Mobile sticky bar button
+        makeBtn(ui, 'product-component-mobile', {
+          'font-size': '14px',
+          'padding-top': '15px',
+          'padding-bottom': '15px',
+          'border-radius': '12px'
         });
       });
     }
