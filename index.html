@@ -86,19 +86,6 @@
     /* =====================================================
        MOBILE STICKY BAR
     ===================================================== */
-    .mobile-bar {
-      display: block;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 200;
-      background: #fff;
-      border-top: 1px solid var(--zinc-100);
-      padding: 12px 20px 18px;
-      box-shadow: 0 -6px 28px rgba(0,0,0,0.07);
-    }
-    .mobile-bar #product-component-mobile { width: 100%; }
-    @media (min-width: 768px) { .mobile-bar { display: none; } }
-
     /* =====================================================
        HERO
     ===================================================== */
@@ -581,11 +568,6 @@
     </div>
   </nav>
 
-  <!-- MOBILE STICKY BAR -->
-  <div class="mobile-bar">
-    <div id="product-component-mobile"></div>
-  </div>
-
   <!-- ======================================================
        HERO
   ====================================================== -->
@@ -1011,13 +993,6 @@
           'color': '#ff1493',
           ':hover': { 'background-color': 'rgba(255,255,255,0.9)' },
           ':focus': { 'background-color': 'rgba(255,255,255,0.9)' }
-        });
-        // Mobile sticky bar button
-        makeBtn(ui, 'product-component-mobile', {
-          'font-size': '14px',
-          'padding-top': '15px',
-          'padding-bottom': '15px',
-          'border-radius': '12px'
         });
       });
     }
